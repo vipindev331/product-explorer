@@ -21,8 +21,8 @@ Requirements: Flutter 3.27 or newer (Dart 3.6+), plus Android Studio or Xcode
 for an emulator, simulator or device. Check with `flutter --version`.
 
 ```bash
-git clone <this-repo-url>
-cd product_explorer
+git clone https://github.com/vipindev331/product-explorer.git
+cd product-explorer
 flutter pub get
 flutter run
 ```
