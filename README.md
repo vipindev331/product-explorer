@@ -11,9 +11,9 @@ A Flutter app for browsing products and viewing product details from the
 
 ## Screen recording
 
-<a href="docs/screenshots/demo.mp4"><img src="docs/screenshots/product_list.png" width="220" alt="Watch the screen recording"></a>
+<img src="docs/screenshots/demo.gif" width="270" alt="Screen recording of the app">
 
-Click the image to watch the screen recording: [docs/screenshots/demo.mp4](docs/screenshots/demo.mp4)
+Full-quality video: [docs/screenshots/demo.mp4](docs/screenshots/demo.mp4)
 
 ## Setup instructions
 
