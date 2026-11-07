@@ -15,7 +15,7 @@ A Flutter app for browsing products and viewing product details from the
 - Image, title, price (with original price when discounted), category, brand and rating on every card
 - Responsive grid: two columns on phones, more on tablets
 - Infinite scroll pagination (`limit`/`skip`), pull to refresh
-- Debounced search using `GET /products/search`
+- Debounced search using `GET /products/search`; the search field drops focus (and the keyboard) when the search finishes or when you tap outside it
 - Loading skeleton, empty state (with “Clear search” for searches), and error state with **Try again**
 
 **Product details**
@@ -76,6 +76,7 @@ store.
 
 | Area | File |
 | --- | --- |
+| Price, number and date formatting | `test/core/formatters_test.dart` |
 | JSON parsing, discount maths | `test/data/models/product_test.dart` |
 | HTTP endpoints and error mapping | `test/data/datasources/product_remote_data_source_test.dart` |
 | On-device cache | `test/data/datasources/product_local_data_source_test.dart` |
@@ -85,6 +86,7 @@ store.
 | Reusable widgets | `test/presentation/widgets/common_widgets_test.dart` |
 | Listing screen states and navigation | `test/presentation/screens/product_list_screen_test.dart` |
 | Details screen content | `test/presentation/screens/product_detail_screen_test.dart` |
+| App start-up smoke test | `test/widget_test.dart` |
 
 A GitHub Actions workflow (`.github/workflows/flutter.yml`) runs
 `flutter analyze` and `flutter test` on every push.
