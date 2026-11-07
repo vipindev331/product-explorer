@@ -1,7 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 /// Network image with a fade-in and a consistent fallback for missing or
 /// broken images.
+///
+/// Images are stored on disk the first time they are downloaded
+/// (`cached_network_image`), so they are still shown offline and after the app
+/// restarts.
 class AppNetworkImage extends StatelessWidget {
   const AppNetworkImage({
     super.key,
@@ -10,6 +15,13 @@ class AppNetworkImage extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.semanticLabel,
   });
+
+  /// Creates the image provider for a URL. Defaults to a disk-cached provider;
+  /// tests replace it so they never touch the network or the file system.
+  static ImageProvider Function(String url) providerFactory = defaultProvider;
+
+  /// The provider used by the app: downloads once, then serves from disk.
+  static ImageProvider defaultProvider(String url) => CachedNetworkImageProvider(url);
 
   final String url;
   final BoxFit fit;
@@ -22,8 +34,8 @@ class AppNetworkImage extends StatelessWidget {
 
     return Padding(
       padding: padding,
-      child: Image.network(
-        url,
+      child: Image(
+        image: providerFactory(url),
         fit: fit,
         semanticLabel: semanticLabel,
         gaplessPlayback: true,
