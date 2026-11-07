@@ -7,7 +7,12 @@ A Flutter app for browsing products and viewing product details from the
 | --- | --- | --- | --- |
 | <img src="docs/screenshots/product_list.png" width="220" alt="Product listing"> | <img src="docs/screenshots/product_detail.png" width="220" alt="Product details"> | <img src="docs/screenshots/product_detail_specs.png" width="220" alt="Product specifications"> | <img src="docs/screenshots/product_detail_reviews.png" width="220" alt="Customer reviews"> |
 
-**Demo video:** [docs/screenshots/demo.mp4](docs/screenshots/demo.mp4) (screen recording on the iPhone 16 Pro simulator)
+### Demo video
+
+<a href="docs/screenshots/demo.mp4"><img src="docs/screenshots/product_list.png" width="220" alt="Watch the demo video"></a>
+
+Click the image to watch the demo ([`docs/screenshots/demo.mp4`](docs/screenshots/demo.mp4),
+screen recording on the iPhone 16 Pro simulator).
 
 ## Features
 
